@@ -10,10 +10,10 @@ K = []
 for i in range(n - 2):
     #For electric
     print(wordDoc.tables[2].columns[i + 2].cells[1].text)
-    f.append(float(wordDoc.tables[2].columns[i + 2].cells[1].text))
-    U.append(float(wordDoc.tables[2].columns[i + 2].cells[2].text))
-    K.append(U[i] / U[0])
-    wordDoc.tables[2].columns[i + 2].cells[3].text = str(K[i])
+    #f.append(float(wordDoc.tables[2].columns[i + 2].cells[1].text))
+    #U.append(float(wordDoc.tables[2].columns[i + 2].cells[2].text))
+    #K.append(U[i] / U[0])
+    #wordDoc.tables[2].columns[i + 2].cells[3].text = str(K[i])
     #For digital
     #f.append(float(wordDoc.tables[2].columns[i + 2].cells[1].text))
     #U.append(float(wordDoc.tables[2].columns[i + 2].cells[4].text))
