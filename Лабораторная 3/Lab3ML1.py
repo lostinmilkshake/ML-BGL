@@ -12,7 +12,7 @@ for i in range(1, len(wordDoc.tables[2].rows)):
     RpN.append(float(wordDoc.tables[2].rows[i].cells[1].text))
     RN.append(float(wordDoc.tables[2].rows[i].cells[2].text))
     dRiN.append(RpN[i-1] - 0.5*q - RN[i - 1])
-    wordDoc.tables[2].rows[i].cells[3].text = str(round(dRiN[i - 1], 3))
+    wordDoc.tables[2].rows[i].cells[3].text = str(round(dRiN[i - 1], 5))
 newFig = plt.figure()
 plt.plot(RN, dRiN)
 plt.grid(True)
