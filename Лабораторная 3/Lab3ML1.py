@@ -18,7 +18,7 @@ plt.plot(RN, dRiN)
 plt.grid(True)
 #plt.xlabel(r'$\Delta R_{иN}')
 
-plt.xlabel(r'$ R_N $') 
+plt.xlabel(r'$ R_N $')
 plt.ylabel(r'$\Delta R_{иN}$')
 plt.show()
 newFig.savefig('thirdPlot.png')

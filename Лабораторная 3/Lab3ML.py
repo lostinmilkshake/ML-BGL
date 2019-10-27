@@ -19,8 +19,8 @@ plt.grid(True)
 #График зависимости погрешности
 
 secondPlt = plt.figure(2)
-#plt.plot(R, dR)
-plt.stairs(R, dR)
+plt.plot(R, dR)
+#plt.stairs(R, dR)
 plt.grid(True)
 
 plt.xlabel('R')
