@@ -9,7 +9,10 @@ for uElement in u:
     s2u += (uElement - ucp)**2
 s2u = s2u * 1/(len(u) - 1)
 s2ucp = s2u / len(u)
-wordDoc.tables[1].rows[1].cells[2].text = str(s2u) + '\n' + str(s2u**0.5)
-wordDoc.tables[1].rows[1].cells[3].text = str(s2ucp) + '\n' + str(s2ucp**0.5)
+wordDoc.tables[1].rows[1].cells[2].text = str(round(ucp, 3))
+wordDoc.tables[1].rows[1].cells[3].text = str(
+    round(s2u, 3)) + '\n\n' + str(round(s2u**0.5, 3))
+wordDoc.tables[1].rows[1].cells[4].text = str(
+    round(s2ucp, 3)) + '\n\n' + str(round(s2ucp**0.5, 3))
 # TODO почситать доверительный интервал
 wordDoc.save('БурковМП ГарцевЕА ЛитвиновКЛ 7301 лаб 5.docx')

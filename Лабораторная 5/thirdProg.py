@@ -12,15 +12,21 @@ s2u2 = 0
 for uElement in u1:
     s2u1 += (uElement - u1cp)**2
 for uElement in u2:
-    s2u1 += (uElement - u1cp)**2
+    s2u2 += (uElement - u1cp)**2
 s2u1 = s2u1 * 1/(len(u1) - 1)
 s2u2 = s2u2 * 1/(len(u2) - 1)
 s2u1cp = s2u1 / len(u1)
 s2u2cp = s2u2 / len(u2)
-wordDoc.tables[2].rows[1].cells[2].text = str(s2u1) + '\n' + str(s2u1**0.5)
-wordDoc.tables[2].rows[1].cells[3].text = str(s2u1cp) + '\n' + str(s2u1cp**0.5)
-wordDoc.tables[3].rows[1].cells[2].text = str(s2u2) + '\n' + str(s2u2**0.5)
-wordDoc.tables[3].rows[1].cells[3].text = str(s2u2cp) + '\n' + str(s2u2cp**0.5)
+wordDoc.tables[2].rows[1].cells[2].text = str(round(u1cp, 3))
+wordDoc.tables[2].rows[1].cells[3].text = str(
+    round(s2u1, 3)) + '\n\n' + str(round(s2u1**0.5, 3))
+wordDoc.tables[2].rows[1].cells[4].text = str(
+    round(s2u1cp, 3)) + '\n\n' + str(round(s2u1cp**0.5, 3))
+wordDoc.tables[3].rows[1].cells[2].text = str(round(u1cp, 3))
+wordDoc.tables[3].rows[1].cells[3].text = str(
+    round(s2u2, 3)) + '\n' + str(round(s2u2**0.5, 3))
+wordDoc.tables[3].rows[1].cells[4].text = str(
+    round(s2u2cp, 3)) + '\n' + str(round(s2u2cp**0.5, 3))
 # TODO почситать доверительный интервал
 r0 = 1000  # TODO проверить R0
 p = u1cp*u2cp / r0
